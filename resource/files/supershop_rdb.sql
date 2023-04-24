@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 06, 2020 at 06:20 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Generation Time: Apr 24, 2023 at 07:23 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -38,17 +37,14 @@ CREATE TABLE `admins` (
   `admin_type` enum('Root Admin','Content Manager','Sales Manager','Technical Operator') NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `admins`
 --
 
 INSERT INTO `admins` (`id`, `admin_name`, `admin_email`, `admin_image`, `admin_password`, `admin_status`, `admin_type`, `created_at`, `updated_at`) VALUES
-(1, 'Nirjhor Anjum Sir', 'nirjhor@adnsl.net', 'ADMINIMAGE_20200706021804_nirjhoranjumsir.png', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', 'Root Admin', '2020-07-06 02:18:04', NULL),
-(2, 'Md. Abdullah Al Mamun Roni', 'md.aamroni@hotmail.com', 'ADMINIMAGE_20200706021844_aamroni.png', '04974f51537a701bcdf340064418a10d3895dde1', 'Active', 'Root Admin', '2020-07-06 02:18:44', NULL),
-(3, 'Jhon Doe', 'jhondoe@gmail.com', 'ADMINIMAGE_20200706021940_jhon.png', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', 'Content Manager', '2020-07-06 02:19:40', NULL),
-(4, 'Al Mamun', 'md.aamroni@yahoo.com', 'ADMINIMAGE_20200706022232_roni.jpg', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', 'Technical Operator', '2020-07-06 02:22:32', NULL);
+(5, 'Francis Lopez', 'fslntsho@gmail.com', 'ADMINIMAGE_20230424105602_123079378_1067152053719654_66737.png', 'f865b53623b121fd34ee5426c792e5c33af8c227', 'Active', 'Root Admin', '2023-04-24 10:56:02', NULL);
 
 -- --------------------------------------------------------
 
@@ -62,22 +58,22 @@ CREATE TABLE `categories` (
   `category_status` enum('Active','Inactive') NOT NULL DEFAULT 'Active',
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`id`, `category_name`, `category_status`, `created_at`, `updated_at`) VALUES
-(1, 'MEN', 'Active', NULL, NULL),
-(2, 'WOMEN', 'Active', NULL, NULL),
-(3, 'KIDS', 'Active', NULL, NULL),
-(4, 'HOME DECOR', 'Active', NULL, NULL),
-(5, 'WEDDING', 'Active', NULL, NULL),
-(7, 'ELECTRONICS', 'Active', NULL, NULL),
-(8, 'WATCHES', 'Active', NULL, NULL),
-(9, 'SHOES', 'Active', NULL, NULL),
-(10, 'ACCESSORIES', 'Active', NULL, NULL);
+(1, 'Basketball', 'Active', NULL, NULL),
+(2, 'Football', 'Active', NULL, NULL),
+(3, 'Softball', 'Active', NULL, NULL),
+(4, 'Volleyball', 'Active', NULL, NULL),
+(5, 'Soccer', 'Active', NULL, NULL),
+(7, 'Swimwear', 'Active', NULL, NULL),
+(8, 'Tennis', 'Active', NULL, NULL),
+(9, 'Cycling', 'Active', NULL, NULL),
+(10, 'Hockey', 'Active', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -93,7 +89,7 @@ CREATE TABLE `contacts` (
   `contacts_overview` varchar(512) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `contacts`
@@ -118,21 +114,14 @@ CREATE TABLE `customers` (
   `customer_status` enum('Active','Inactive') NOT NULL DEFAULT 'Active',
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `customers`
 --
 
 INSERT INTO `customers` (`id`, `customer_name`, `customer_email`, `customer_mobile`, `customer_address`, `customer_password`, `customer_status`, `created_at`, `updated_at`) VALUES
-(1, 'Md. Kabir Khan', 'kabirkhan@gmail.com', '01645770422', 'Rampura-1219, Dhaka, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 08:40:58', NULL),
-(2, 'Jhon Doe', 'jhondoe@gmail.com', '01645770422', 'Panthapath-1205, Dhaka, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 08:54:22', NULL),
-(3, 'Al Mamun Roni', 'almamunroni@gmail.com', '01645770422', 'Chasara-1405, Narayanganj, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 08:57:10', NULL),
-(4, 'Nirjhor Anjum', 'nirjhorsir@gmail.com', '01645770422', 'Dhaka-1206, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 09:37:53', NULL),
-(8, 'Jobayer Tuser', 'jobayertuser@gmail.com', '01645770422', 'Mohammadpur-1216, Dhaka, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 09:48:31', NULL),
-(9, 'Ahsan Habib', 'ahsanhabib@gmail.com', '01645770422', 'Dhaka, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 09:53:19', NULL),
-(13, 'Ahsan Habib', 'ahsanhabib@gmail.com', '01645770422', 'Dhaka, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 09:55:57', NULL),
-(14, 'Ahsan Habib', 'ahsanhabib@gmail.com', '01645770422', 'Dhaka, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 09:56:40', NULL);
+(15, 'Francis Lopez', 'fslntsho@gmail.com', '09878787675', 'Santa. Teresita Iriga City', 'dd94709528bb1c83d08f3088d4043f4742891f4f', 'Active', '2023-04-24 11:05:07', NULL);
 
 -- --------------------------------------------------------
 
@@ -146,7 +135,7 @@ CREATE TABLE `deliveries` (
   `shipping_charge` enum('50','120') NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -160,7 +149,7 @@ CREATE TABLE `discounts` (
   `price_discount_amount` double NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -177,15 +166,14 @@ CREATE TABLE `invoices` (
   `transaction_amount` double NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `invoices`
 --
 
 INSERT INTO `invoices` (`id`, `invoice_id`, `customer_id`, `shipping_id`, `order_id`, `transaction_amount`, `created_at`, `updated_at`) VALUES
-(1, 'COD#86237', 3, 1, 1, 9470, '2020-07-06 09:04:10', NULL),
-(2, '20070695548Tp5hxKeh1HPezyg', 9, 2, 2, 21078, '2020-07-06 10:02:09', NULL);
+(3, 'COD#29314', 15, 3, 3, 10257, '2023-04-24 11:08:13', NULL);
 
 -- --------------------------------------------------------
 
@@ -198,7 +186,7 @@ CREATE TABLE `newsletters` (
   `newsletter_email` varchar(128) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -221,15 +209,14 @@ CREATE TABLE `orders` (
   `order_item_status` enum('Pending','Processing','Completed','Cancelled') NOT NULL DEFAULT 'Pending',
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `orders`
 --
 
 INSERT INTO `orders` (`id`, `customer_id`, `order_date`, `sub_total`, `tax`, `delivery_charge`, `discount_amount`, `grand_total`, `payment_method`, `transaction_id`, `transaction_status`, `order_item_status`, `created_at`, `updated_at`) VALUES
-(1, 3, '2020-07-06 09:02:32', 8698, 652.35, 120, 0, 9470, 'Cash On Delivery', 'COD#3', 'Unpaid', 'Pending', '2020-07-06 09:02:32', NULL),
-(2, 9, '2020-07-06 10:00:01', 19496, 1462.2, 120, 0, 21078, 'SSL COMMERZ', '20070695548h40YeCxaiNzdD8D', 'Paid', 'Pending', '2020-07-06 10:00:01', NULL);
+(3, 15, '2023-04-24 11:06:55', 9495, 712.125, 50, 0, 10257, 'Cash On Delivery', 'COD#15', 'Unpaid', 'Pending', '2023-04-24 11:06:55', NULL);
 
 -- --------------------------------------------------------
 
@@ -246,19 +233,14 @@ CREATE TABLE `order_items` (
   `prod_quantity` int(11) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `order_items`
 --
 
 INSERT INTO `order_items` (`id`, `customer_id`, `order_id`, `product_id`, `product_price`, `prod_quantity`, `created_at`, `updated_at`) VALUES
-(1, 3, 1, 38, 5899, 1, '2020-07-06 09:02:32', NULL),
-(2, 3, 1, 20, 2799, 1, '2020-07-06 09:02:32', NULL),
-(3, 9, 2, 17, 4799, 1, '2020-07-06 10:00:01', NULL),
-(4, 9, 2, 39, 7499, 1, '2020-07-06 10:00:01', NULL),
-(5, 9, 2, 45, 4899, 1, '2020-07-06 10:00:01', NULL),
-(6, 9, 2, 48, 2299, 1, '2020-07-06 10:00:01', NULL);
+(7, 15, 3, 8, 1899, 5, '2023-04-24 11:06:55', NULL);
 
 -- --------------------------------------------------------
 
@@ -273,7 +255,7 @@ CREATE TABLE `pages` (
   `page_status` enum('Active','Inactive') NOT NULL DEFAULT 'Active',
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -302,7 +284,7 @@ CREATE TABLE `products` (
   `products_image_one` text DEFAULT NULL,
   `products_image_two` text DEFAULT NULL,
   `products_image_three` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `products`
@@ -316,10 +298,10 @@ INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `product_name`, `
 (5, 9, 9, 'MEN\'S SANDAL', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031047_shoe(2).jpg', 1, 1599, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'sandal,mens sandal', '2020-07-06 03:10:47', NULL, 'PRODUCTONE_20200706031047_shoe(2).jpg', 'PRODUCTTWO_20200706031047_shoe(2).jpg', 'PRODUCTTHREE_20200706031047_shoe(2).jpg'),
 (6, 9, 9, 'MEN\'S SANDAL', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031132_shoe(4).jpg', 1, 1299, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'sandal,mens sandal', '2020-07-06 03:11:32', NULL, 'PRODUCTONE_20200706031132_shoe(4).jpg', 'PRODUCTTWO_20200706031132_shoe(4).jpg', 'PRODUCTTHREE_20200706031132_shoe(4).jpg'),
 (7, 9, 10, 'MEN\'S SHOE', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031300_shoe(1).jpg', 1, 3699, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'shoe,mens shoe', '2020-07-06 03:13:00', NULL, 'PRODUCTONE_20200706031300_shoe(1).jpg', 'PRODUCTTWO_20200706031300_shoe(1).jpg', 'PRODUCTTHREE_20200706031300_shoe(1).jpg'),
-(8, 1, 1, 'MEN\'S PANJABI', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031559_mens_panjabi(4).jpg', 2, 1899, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'panjabi,white panjabi,mens panjabi', '2020-07-06 03:15:59', NULL, 'PRODUCTONE_20200706031559_mens_panjabi(4).jpg', 'PRODUCTTWO_20200706031559_mens_panjabi(4).jpg', 'PRODUCTTHREE_20200706031559_mens_panjabi(4).jpg'),
+(8, 1, 1, 'MEN\'S PANJABI', '																																													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>																																								', '																																													<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>																																								', 'PRODUCT_20200706031559_mens_panjabi(4).jpg', 2, 1899, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'panjabi,white panjabi,mens panjabi', '2020-07-06 03:15:59', NULL, 'PRODUCTONE_20200706031559_mens_panjabi(4).jpg', 'PRODUCTTWO_20200706031559_mens_panjabi(4).jpg', 'PRODUCTTHREE_20200706031559_mens_panjabi(4).jpg'),
 (9, 1, 1, 'MEN\'S PANJABI', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.<br></li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031658_mens_panjabi(3).jpg', 1, 1799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'panjabi,mens panjabi,long panjabi', '2020-07-06 03:16:58', NULL, 'PRODUCTONE_20200706031658_mens_panjabi(3).jpg', 'PRODUCTTWO_20200706031658_mens_panjabi(3).jpg', 'PRODUCTTHREE_20200706031658_mens_panjabi(3).jpg'),
 (10, 1, 1, 'MEN\'S PANJABI', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031754_mens_panjabi(2).jpg', 2, 1899, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'YES', 'panjabi,mens panjabi,blue panjabi', '2020-07-06 03:17:54', NULL, 'PRODUCTONE_20200706031754_mens_panjabi(2).jpg', 'PRODUCTTWO_20200706031754_mens_panjabi(2).jpg', 'PRODUCTTHREE_20200706031754_mens_panjabi(2).jpg'),
-(11, 1, 1, 'MEN\'S PANJABI', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031845_mens_panjabi(1).jpg', 1, 1499, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'panjabi,red panjabi', '2020-07-06 03:18:45', NULL, 'PRODUCTONE_20200706031845_mens_panjabi(1).jpg', 'PRODUCTTWO_20200706031845_mens_panjabi(1).jpg', 'PRODUCTTHREE_20200706031845_mens_panjabi(1).jpg'),
+(11, 1, 1, 'MEN\'S PANJABI', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031845_mens_panjabi(1).jpg', 1, 1499, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'YES', 'panjabi,red panjabi', '2020-07-06 03:18:45', NULL, 'PRODUCTONE_20200706031845_mens_panjabi(1).jpg', 'PRODUCTTWO_20200706031845_mens_panjabi(1).jpg', 'PRODUCTTHREE_20200706031845_mens_panjabi(1).jpg'),
 (12, 1, 6, 'SUMMER SUIT 2020', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706032108_blazer(8).jpg', 2, 4599, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'pink suit,summer suit', '2020-07-06 03:21:08', NULL, 'PRODUCTONE_20200706032108_blazer(8).jpg', 'PRODUCTTWO_20200706032108_blazer(8).jpg', 'PRODUCTTHREE_20200706032108_blazer(8).jpg'),
 (13, 1, 6, 'MEN\'S SUMMER SUIT', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706032202_blazer(3).jpg', 1, 4899, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'YES', 'mens suit,summer suit', '2020-07-06 03:22:02', NULL, 'PRODUCTONE_20200706032202_blazer(3).jpg', 'PRODUCTTWO_20200706032202_blazer(3).jpg', 'PRODUCTTHREE_20200706032202_blazer(3).jpg'),
 (14, 1, 6, 'SUMMER SUIT 2020', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706032258_blazer(1).jpg', 1, 4799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'NO', 'suit,mens suit', '2020-07-06 03:22:58', NULL, 'PRODUCTONE_20200706032258_blazer(1).jpg', 'PRODUCTTWO_20200706032258_blazer(1).jpg', 'PRODUCTTHREE_20200706032258_blazer(1).jpg'),
@@ -399,15 +381,14 @@ CREATE TABLE `shippings` (
   `shipcstmr_country` varchar(64) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `shippings`
 --
 
 INSERT INTO `shippings` (`id`, `customer_id`, `order_id`, `shipcstmr_name`, `shipcstmr_mobile`, `shipcstmr_profession`, `shipcstmr_streetadd`, `shipcstmr_city`, `shipcstmr_zip`, `shipcstmr_country`, `created_at`, `updated_at`) VALUES
-(1, 3, 1, 'Firoz Ahmed', '01645770422', 'Graphics Designer', 'Police Line, Panchabati', 'Fatullah', '1405', 'Bangladesh', '2020-07-06 09:03:55', NULL),
-(2, 9, 2, 'Shahnaz Khanam', '01645770422', 'Housewife', 'Main Road # 2/B', 'Baridhara', '1406', 'Bangladesh', '2020-07-06 10:02:01', NULL);
+(3, 15, 3, 'Francis Lopez', '09898767665', 'N/A', 'Santol Street', 'Iriga City', '4431', 'Philippines', '2023-04-24 11:07:46', NULL);
 
 -- --------------------------------------------------------
 
@@ -422,7 +403,14 @@ CREATE TABLE `shopcarts` (
   `quantity` int(11) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `shopcarts`
+--
+
+INSERT INTO `shopcarts` (`id`, `customer_id`, `product_id`, `quantity`, `created_at`, `updated_at`) VALUES
+(8, 15, 11, 2, '2023-04-24 11:19:51', NULL);
 
 -- --------------------------------------------------------
 
@@ -438,19 +426,16 @@ CREATE TABLE `slides` (
   `slider_sequence` int(11) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `slides`
 --
 
 INSERT INTO `slides` (`id`, `slider_title`, `slider_file`, `slider_status`, `slider_sequence`, `created_at`, `updated_at`) VALUES
-(1, 'EID FESTIVAL COLLECTION 2020', 'SLIDER_20200706022816_slide852r.jpg', 'Active', 1, NULL, NULL),
-(2, 'HOME DECOR', 'SLIDER_20200706022832_slider.jpg', 'Active', 2, NULL, NULL),
-(3, 'PAHELA BAISHAK COLLECTION 2020', 'SLIDER_20200706022906_slid63er.jpg', 'Active', 3, NULL, NULL),
-(4, 'EID COLLECTION 2020', 'SLIDER_20200706022921_slid3er.jpg', 'Active', 4, NULL, NULL),
-(5, 'KIDS COLLECTION 2020', 'SLIDER_20200706022936_slide1r.jpg', 'Active', 5, NULL, NULL),
-(6, 'SUMMER COLLECTION 2020', 'SLIDER_20200706023006_sli74der.jpg', 'Active', 6, NULL, NULL);
+(7, 'ㅤ', 'SLIDER_20230424093636_1..png', 'Active', 1, NULL, NULL),
+(8, 'ㅤ', 'SLIDER_20230424093645_new.png', 'Active', 1, NULL, NULL),
+(9, 'ㅤ', 'SLIDER_20230424093652_5.png', 'Active', 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -466,14 +451,14 @@ CREATE TABLE `subcategories` (
   `subcategory_banner` text NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `subcategories`
 --
 
 INSERT INTO `subcategories` (`id`, `category_id`, `subcategory_name`, `subcategory_status`, `subcategory_banner`, `created_at`, `updated_at`) VALUES
-(1, 1, 'MEN\'S PANJABI', 'Active', 'SUBCATBANNER_20200706024241_banner(5).jpg', '2020-07-06 02:42:41', NULL),
+(1, 1, 'Shirts', 'Active', 'SUBCATBANNER__20230424110205_1..png', '2020-07-06 02:42:41', NULL),
 (2, 1, 'MEN\'S BLAZER', 'Active', 'SUBCATBANNER_20200706024406_banner(3).jpg', '2020-07-06 02:44:06', NULL),
 (3, 1, 'MEN\'S CASUAL SHIRT', 'Active', 'SUBCATBANNER_20200706024437_banner(6).jpg', '2020-07-06 02:44:37', NULL),
 (4, 1, 'MEN\'S T-SHIRT', 'Active', 'SUBCATBANNER_20200706024503_banner(1).jpg', '2020-07-06 02:45:03', NULL),
@@ -621,7 +606,7 @@ ALTER TABLE `subcategories`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ADMINS ID', AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ADMINS ID', AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -639,13 +624,13 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'CUSTOMERS ID', AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'CUSTOMERS ID', AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `deliveries`
 --
 ALTER TABLE `deliveries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'DELIVERIES ID', AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'DELIVERIES ID', AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `discounts`
@@ -657,7 +642,7 @@ ALTER TABLE `discounts`
 -- AUTO_INCREMENT for table `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'INVOICE ID', AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'INVOICE ID', AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `newsletters`
@@ -669,13 +654,13 @@ ALTER TABLE `newsletters`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDERS ID', AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDERS ID', AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDER ITEMS ID', AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDER ITEMS ID', AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -693,19 +678,19 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `shippings`
 --
 ALTER TABLE `shippings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SHIPPING ID', AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SHIPPING ID', AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `shopcarts`
 --
 ALTER TABLE `shopcarts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SHOPCARTS ID', AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SHOPCARTS ID', AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `slides`
 --
 ALTER TABLE `slides`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SLIDER ID', AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SLIDER ID', AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `subcategories`
