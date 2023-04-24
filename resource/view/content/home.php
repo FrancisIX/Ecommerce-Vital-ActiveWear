@@ -95,24 +95,27 @@ $watchProducts = $eloquent->selectData($columnName, $tableName, @$whereValue, @$
 	<div class="info-boxes-container">
 		<div class="container">
 			<div class="info-box">
-				<i class="icon-shipping"></i>
+				<i class="icon-check"></i>
 				<div class="info-box-content">
-					<h4>FREE SHIPPING & RETURN</h4>
-					<p>Free shipping on all orders over $99.</p>
+					<h4>Quality Product</h4>
 				</div>
 			</div>
 			<div class="info-box">
-				<i class="icon-us-dollar"></i>
+				<i class="icon-shipping"></i>
 				<div class="info-box-content">
-					<h4>MONEY BACK GUARANTEE</h4>
-					<p>100% money back guarantee</p>
+					<h4>Free Shipping</h4>
 				</div>
 			</div>
 			<div class="info-box">
 				<i class="icon-support"></i>
 				<div class="info-box-content">
-					<h4>ONLINE SUPPORT 24/7</h4>
-					<p>Lorem ipsum dolor sit amet.</p>
+					<h4>14-Day Return</h4>
+				</div>
+			</div>
+			<div class="info-box">
+				<i class="icon-phone"></i>
+				<div class="info-box-content">
+					<h4>24/7 Support</h4>
 				</div>
 			</div>
 		</div>
