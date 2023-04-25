@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2023 at 08:44 AM
+-- Generation Time: Apr 25, 2023 at 09:16 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -65,7 +65,8 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `category_name`, `category_status`, `created_at`, `updated_at`) VALUES
-(1, 'Basketball', 'Active', NULL, NULL);
+(1, 'Basketball', 'Active', NULL, NULL),
+(2, 'Football', 'Active', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -254,12 +255,20 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `product_name`, `product_summary`, `product_details`, `product_master_image`, `product_quantity`, `product_price`, `product_discount_price`, `discount_start`, `discount_ends`, `product_status`, `product_featured`, `product_tags`, `created_at`, `updated_at`) VALUES
 (1, 1, 1, 'Gold State 30', '																																				Lorem Ipsum																																', '																											XL																								', 'PRODUCT_20230425123850_gt.png', 100, 199, 0, '2023-04-25 07:34:20', '2023-04-25 07:34:20', 'In Stock', 'YES', 'basketball', NULL, NULL),
 (2, 1, 1, 'Team 25', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,								', '									XL								', 'PRODUCT_20230425115837_PRODUCT_20230425092324_basketball-jersey-icon-on-transp.png', 100, 199, 15, '2023-04-25 07:55:21', '2023-04-25 07:55:21', 'In Stock', 'YES', '', NULL, NULL),
-(3, 1, 1, 'Young Ma 3', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,								', '									XL								', 'PRODUCT_20230425120044_BBP2.jpg', 100, 299, 20, '2023-04-25 07:59:29', '2023-04-25 07:59:29', 'In Stock', 'NO', '', NULL, NULL),
+(3, 1, 1, 'Young Ma 3', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,								', '									XL								', 'PRODUCT_20230425120044_BBP2.jpg', 100, 299, 20, '2023-04-25 07:59:29', '2023-04-25 07:59:29', 'In Stock', 'YES', '', NULL, NULL),
 (4, 1, 1, 'Atlanta 17', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									M								', 'PRODUCT_20230425120858_atlanta.png', 100, 299, 10, '2023-04-25 08:04:10', '2023-04-25 08:04:10', 'In Stock', 'YES', '', NULL, NULL),
 (5, 1, 2, 'DRI FIT DNA 20CM Basketball', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									RED XL								', 'PRODUCT_20230425121545_dri-fit-dna-20cm-basketball-shor.png', 100, 99, 5, '2023-04-25 08:13:30', '2023-04-25 08:13:30', 'In Stock', 'YES', '', NULL, NULL),
 (6, 1, 2, 'DRI FIT DNA Basketball 2D', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									White Size M								', 'PRODUCT_20230425121752_dri-fit-dna-basketball-shorts-2D.png', 100, 299, 8, '2023-04-25 08:16:00', '2023-04-25 08:16:00', 'In Stock', 'YES', '', NULL, NULL),
 (7, 1, 2, 'Jorda DRI Fit Sport', '																		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s																', '																		XL SIZE																', 'PRODUCT_20230425124209_hahaha.png', 599, 999, 15, '2023-04-25 08:39:46', '2023-04-25 08:39:46', 'In Stock', 'YES', '', NULL, NULL),
-(8, 1, 2, 'Nike Circa', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									XL White								', 'PRODUCT_20230425124335_circa-20cm-basketball-shorts-V7c.png', 100, 299, 7, '2023-04-25 08:42:20', '2023-04-25 08:42:20', 'In Stock', 'YES', '', NULL, NULL);
+(8, 1, 2, 'Nike Circa', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									XL White								', 'PRODUCT_20230425124335_circa-20cm-basketball-shorts-V7c.png', 100, 299, 7, '2023-04-25 08:42:20', '2023-04-25 08:42:20', 'In Stock', 'YES', '', NULL, NULL),
+(9, 2, 3, 'Nike Tiempo Legend 9 Academy MG', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									Multi-Ground Football Boot								', 'PRODUCT_20230425125416_1.png', 100, 2500, 1, '2023-04-25 08:52:48', '2023-04-25 08:52:48', 'In Stock', 'YES', '', NULL, NULL),
+(10, 2, 3, 'Nike Zoom Mercurial Vapor 15 Academy IC', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									Indoor Court Football Shoes								', 'PRODUCT_20230425125655_zoom-mercurial-vapor-15-academy.png', 100, 5999, 15, '2023-04-25 08:55:51', '2023-04-25 08:55:51', 'In Stock', 'YES', '', NULL, NULL),
+(11, 2, 3, 'Nike Zoom Mercurial Dream Speed Superfly 9 Elite FG', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									Firm-Ground Football Boot								', 'PRODUCT_20230425130027_save.png', 99, 5999, 1, '2023-04-25 08:57:28', '2023-04-25 08:57:28', 'In Stock', 'YES', '', NULL, NULL),
+(12, 2, 3, 'Nike Phantom GT2 Academy IC', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									ndoor Court Football Shoes								', 'PRODUCT_20230425130222_sddsd.png', 99, 4999, 12, '2023-04-25 09:00:56', '2023-04-25 09:00:56', 'In Stock', 'YES', '', NULL, NULL),
+(13, 2, 4, 'Nike Dri-FIT Academy', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									Men\'s Short-Sleeve Graphic Football Top								', 'PRODUCT_20230425130636_dri-fit-academy-short-sleeve-gra.png', 100, 999, 1, '2023-04-25 09:05:27', '2023-04-25 09:05:27', 'In Stock', 'NO', '', NULL, NULL),
+(14, 2, 4, 'Paris Saint-Germain 2022/23 Match Fourth', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									Men\'s Jordan Dri-FIT ADV Football Shirt								', 'PRODUCT_20230425131016_qotarm airways.png', 100, 599, 5, '2023-04-25 09:08:54', '2023-04-25 09:08:54', 'In Stock', 'YES', '', NULL, NULL),
+(15, 2, 4, 'Nike Dri-FIT Academy', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									Men\'s Short-Sleeve Football Top								', 'PRODUCT_20230425131231_dri-fit-academy-short-sleeve-foo.png', 99, 299, 1, '2023-04-25 09:11:44', '2023-04-25 09:11:44', 'In Stock', 'YES', '', NULL, NULL),
+(16, 2, 4, 'F.C. Barcelona 2022/23 Stadium Third', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									Men\'s Nike Dri-FIT Football Shirt								', 'PRODUCT_20230425131517_fc-barcelona-2022-23-stadium-thi.png', 100, 599, 1, '2023-04-25 09:14:23', '2023-04-25 09:14:23', 'In Stock', 'YES', '', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -345,7 +354,9 @@ CREATE TABLE `subcategories` (
 
 INSERT INTO `subcategories` (`id`, `category_id`, `subcategory_name`, `subcategory_status`, `subcategory_banner`, `created_at`, `updated_at`) VALUES
 (1, 1, 'Jersey', 'Active', 'SUBCATBANNER_20230425112957_jersey banner.png', '2023-04-25 11:29:57', NULL),
-(2, 1, 'Shorts', 'Active', 'SUBCATBANNER_20230425121315_shorts.png', '2023-04-25 12:13:15', NULL);
+(2, 1, 'Shorts', 'Active', 'SUBCATBANNER_20230425121315_shorts.png', '2023-04-25 12:13:15', NULL),
+(3, 2, 'Shoes', 'Active', 'SUBCATBANNER_20230425125238_shoes.png', '2023-04-25 12:52:38', NULL),
+(4, 2, 'FootBall Shirts', 'Active', 'SUBCATBANNER_20230425130518_football shirts.png', '2023-04-25 13:05:18', NULL);
 
 --
 -- Indexes for dumped tables
@@ -476,7 +487,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'CATEGORIES ID', AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'CATEGORIES ID', AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `contacts`
@@ -536,7 +547,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'PRODUCTS ID', AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'PRODUCTS ID', AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `shippings`
@@ -560,7 +571,7 @@ ALTER TABLE `slides`
 -- AUTO_INCREMENT for table `subcategories`
 --
 ALTER TABLE `subcategories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SUBCATEGORIES ID', AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SUBCATEGORIES ID', AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
