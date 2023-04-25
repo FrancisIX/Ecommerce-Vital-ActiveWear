@@ -14,10 +14,10 @@ if(isset($_POST['update_data']))
 {
 	#== IF UPDATE DATA WITHOUT IMAGES
 	if(	
-	empty($_FILES['product_master_image']['name']) &&
-	empty($_FILES['products_image_one']['name']) &&
-	empty($_FILES['products_image_two']['name']) &&
-	empty($_FILES['products_image_three']['name'])
+	empty($_FILES['product_master_image']['name'])
+	// empty($_FILES['products_image_one']['name']) &&
+	// empty($_FILES['products_image_two']['name']) &&
+	// empty($_FILES['products_image_three']['name'])
 	)
 	{
 		$tableName = $columnValue = $whereValue = null;
@@ -40,17 +40,17 @@ if(isset($_POST['update_data']))
 	{
 		#== NEW IMAGE FILE NAME GENERATE
 		$filemasname = "PRODUCT_" . date("YmdHis") . "_" . $_FILES['product_master_image']['name'];
-		$fileaddonename = "PRODUCTONE_" . date("YmdHis") . "_" . $_FILES['product_master_image']['name'];
-		$fileaddtwoname = "PRODUCTTWO_" . date("YmdHis") . "_" . $_FILES['product_master_image']['name'];
-		$fileaddthreename = "PRODUCTTHREE_" . date("YmdHis") . "_" . $_FILES['product_master_image']['name'];
+		// $fileaddonename = "PRODUCTONE_" . date("YmdHis") . "_" . $_FILES['product_master_image']['name'];
+		// $fileaddtwoname = "PRODUCTTWO_" . date("YmdHis") . "_" . $_FILES['product_master_image']['name'];
+		// $fileaddthreename = "PRODUCTTHREE_" . date("YmdHis") . "_" . $_FILES['product_master_image']['name'];
 		
 		#== IMAGE FILES VALIDATION
 		$prodmstrResult = $control->checkImage($_FILES['product_master_image']['type'], $_FILES['product_master_image']['size'], $_FILES['product_master_image']['error']);
-		$prodaddoneResult = $control->checkImage($_FILES['products_image_one']['type'], $_FILES['products_image_one']['size'], $_FILES['products_image_one']['error']);
-		$prodaddtwoResult = $control->checkImage($_FILES['products_image_two']['type'], $_FILES['products_image_two']['size'], $_FILES['products_image_two']['error']);
-		$prodaddthreeResult = $control->checkImage($_FILES['products_image_three']['type'], $_FILES['products_image_three']['size'], $_FILES['products_image_three']['error']);
+		// $prodaddoneResult = $control->checkImage($_FILES['products_image_one']['type'], $_FILES['products_image_one']['size'], $_FILES['products_image_one']['error']);
+		// $prodaddtwoResult = $control->checkImage($_FILES['products_image_two']['type'], $_FILES['products_image_two']['size'], $_FILES['products_image_two']['error']);
+		// $prodaddthreeResult = $control->checkImage($_FILES['products_image_three']['type'], $_FILES['products_image_three']['size'], $_FILES['products_image_three']['error']);
 		
-		if($prodmstrResult == 1 && $prodaddoneResult == 1 && $prodaddtwoResult == 1 && $prodaddthreeResult == 1)
+		if($prodmstrResult == 1 )
 		{
 			$tableName = $columnValue = $whereValue = null;
 			$tableName = "products";
@@ -60,9 +60,7 @@ if(isset($_POST['update_data']))
 			$columnValue["product_summary"] = $_POST['product_summary'];
 			$columnValue["product_details"] = $_POST['product_details'];
 			$columnValue["product_master_image"] = $filemasname;
-			$columnValue["products_image_one"] = $fileaddonename;
-			$columnValue["products_image_two"] = $fileaddtwoname;
-			$columnValue["products_image_three"] = $fileaddthreename;
+	
 			$columnValue["product_quantity"] = $_POST['product_quantity'];
 			$columnValue["product_price"] = $_POST['product_price'];
 			$columnValue["product_status"] = $_POST['product_status'];
@@ -75,15 +73,15 @@ if(isset($_POST['update_data']))
 			{
 				#== ADD IMAGES TO THE DIRECTORY
 				move_uploaded_file($_FILES['product_master_image']['tmp_name'], $GLOBALS['PRODUCT_DIRECTORY'] . $filemasname);
-				move_uploaded_file($_FILES['products_image_one']['tmp_name'], $GLOBALS['PRODUCTADD_DIRECTORY'] . $fileaddonename);
-				move_uploaded_file($_FILES['products_image_two']['tmp_name'], $GLOBALS['PRODUCTADD_DIRECTORY'] . $fileaddtwoname);
-				move_uploaded_file($_FILES['products_image_three']['tmp_name'], $GLOBALS['PRODUCTADD_DIRECTORY'] . $fileaddthreename);
+				// move_uploaded_file($_FILES['products_image_one']['tmp_name'], $GLOBALS['PRODUCTADD_DIRECTORY'] . $fileaddonename);
+				// move_uploaded_file($_FILES['products_image_two']['tmp_name'], $GLOBALS['PRODUCTADD_DIRECTORY'] . $fileaddtwoname);
+				// move_uploaded_file($_FILES['products_image_three']['tmp_name'], $GLOBALS['PRODUCTADD_DIRECTORY'] . $fileaddthreename);
 				
 				#== REMOVE IMAGES FROM THE DIRECTORY
 				unlink($_SESSION['SMC_edit_data_image_mas_file_old']);
-				unlink($_SESSION['SMC_edit_data_image_one_file_old']);
-				unlink($_SESSION['SMC_edit_data_image_two_file_old']);
-				unlink($_SESSION['SMC_edit_data_image_three_file_old']);
+				// unlink($_SESSION['SMC_edit_data_image_one_file_old']);
+				// unlink($_SESSION['SMC_edit_data_image_two_file_old']);
+				// unlink($_SESSION['SMC_edit_data_image_three_file_old']);
 			}
 		}
 	}
@@ -104,9 +102,9 @@ if(isset($_POST['edit_data']))
 $tableName = $columnName = $whereValue = $joinType = $onCondition = null;
 $columnName["1"] = "products.product_name";
 $columnName["2"] = "products.product_master_image";
-$columnName["3"] = "products.products_image_one";
-$columnName["4"] = "products.products_image_two";
-$columnName["5"] = "products.products_image_three";
+// $columnName["3"] = "products.products_image_one";
+// $columnName["4"] = "products.products_image_two";
+// $columnName["5"] = "products.products_image_three";
 $columnName["6"] = "products.product_quantity";
 $columnName["7"] = "products.product_price";
 $columnName["8"] = "products.product_status";
@@ -131,9 +129,9 @@ $getproductData = $eloquent->selectJoinData($columnName, $tableName, $joinType, 
 
 #== STORING OLD PRODUCT IMAGE DATA IN A SESSION VARIABLE
 $_SESSION['SMC_edit_data_image_mas_file_old'] = $GLOBALS['PRODUCT_DIRECTORY'] . $getproductData[0]['product_master_image'];
-$_SESSION['SMC_edit_data_image_one_file_old'] = $GLOBALS['PRODUCTADD_DIRECTORY'] . $getproductData[0]['products_image_one'];
-$_SESSION['SMC_edit_data_image_two_file_old'] = $GLOBALS['PRODUCTADD_DIRECTORY'] . $getproductData[0]['products_image_two'];
-$_SESSION['SMC_edit_data_image_three_file_old'] = $GLOBALS['PRODUCTADD_DIRECTORY'] . $getproductData[0]['products_image_three'];
+// $_SESSION['SMC_edit_data_image_one_file_old'] = $GLOBALS['PRODUCTADD_DIRECTORY'] . $getproductData[0]['products_image_one'];
+// $_SESSION['SMC_edit_data_image_two_file_old'] = $GLOBALS['PRODUCTADD_DIRECTORY'] . $getproductData[0]['products_image_two'];
+// $_SESSION['SMC_edit_data_image_three_file_old'] = $GLOBALS['PRODUCTADD_DIRECTORY'] . $getproductData[0]['products_image_three'];
 ## ===*=== [F]ETCH EXISTING PRODUCT DATA  ===*=== ##
 
 
@@ -286,62 +284,7 @@ $categoryList = $eloquent->selectData($columnName, $tableName);
 								</div>
 							</div>
 						</div>
-						<div class="d-flex d-inline">	<!-- product additional images start -->
-							<div class="form-group">
-								<label class="control-label col-md-2 ">Product Additional Image</label>
-								<div class="controls col-md-3">
-									<div class="fileupload fileupload-new" data-provides="fileupload">
-										<span class="btn btn-default btn-file">
-											<input type="file" name="products_image_one" class="default" onchange="readURL(this);" set-to="div2" />
-										</span>
-										<span class="fileupload-preview" style="margin-left:5px;"></span>
-										<a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
-									</div>
-								</div>
-								<div class="controls col-md-3">
-									<div class="fileupload fileupload-new" data-provides="fileupload">
-										<span class="btn btn-default btn-file">
-											<input type="file" name="products_image_two" class="default" onchange="readURL(this);" set-to="div3" />
-										</span>
-										<span class="fileupload-preview" style="margin-left:5px;"></span>
-										<a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
-									</div>
-								</div>
-								<div class="controls col-md-3">
-									<div class="fileupload fileupload-new" data-provides="fileupload">
-										<span class="btn btn-default btn-file">
-											<input type="file" name="products_image_three" class="default" onchange="readURL(this);" set-to="div4" />
-										</span>
-										<span class="fileupload-preview" style="margin-left:5px;"></span>
-										<a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-2">Product Additional Preview</label>
-								<div class="col-md-3">
-									<div class="fileupload fileupload-new" data-provides="fileupload">
-										<div class="fileupload-new thumbnail" style="width: 160px; height: 160px;">
-											<img style="height: 100%; width: 100%;" src="<?php echo $GLOBALS['PRODUCTADD_DIRECTORY'] . $getproductData[0]['products_image_one'] ;?>" alt="" id="div2"/>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="fileupload fileupload-new" data-provides="fileupload">
-										<div class="fileupload-new thumbnail" style="width: 160px; height: 160px;">
-											<img style="height: 100%; width: 100%;" src="<?php echo $GLOBALS['PRODUCTADD_DIRECTORY'] . $getproductData[0]['products_image_two'] ;?>" alt="" id="div3"/>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="fileupload fileupload-new" data-provides="fileupload">
-										<div class="fileupload-new thumbnail" style="width: 160px; height: 160px;">
-											<img style="height: 100%; width: 100%;" src="<?php echo $GLOBALS['PRODUCTADD_DIRECTORY'] . $getproductData[0]['products_image_three'] ;?>" alt="" id="div4"/>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>		<!-- product additional images end -->
+						
 						<div class="form-group">
 							<label for="ProductName" class="col-lg-2 col-sm-2 control-label">Product Tags</label>
 							<div class="col-md-7">
