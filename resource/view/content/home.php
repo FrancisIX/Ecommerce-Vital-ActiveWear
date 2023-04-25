@@ -126,7 +126,7 @@ $watchProducts = $eloquent->selectData($columnName, $tableName, @$whereValue, @$
 				<div class="home-product-tabs">
 					<ul class="nav nav-tabs" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link active" id="featured-products-tab" data-toggle="tab" href="#featured-products" role="tab" aria-controls="featured-products" aria-selected="true">Men</a>
+							<a class="nav-link active" id="featured-products-tab" data-toggle="tab" href="#featured-products" role="tab" aria-controls="featured-products" aria-selected="true">Basketball Collection</a>
 						</li>
 					</ul>
 					<div class="tab-content">
@@ -149,7 +149,7 @@ $watchProducts = $eloquent->selectData($columnName, $tableName, @$whereValue, @$
 				<div class="home-product-tabs">
 					<ul class="nav nav-tabs" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link active" id="featured-products-tab" data-toggle="tab" href="#featured-products" role="tab" aria-controls="featured-products" aria-selected="true">Women</a>
+							<a class="nav-link active" id="featured-products-tab" data-toggle="tab" href="#featured-products" role="tab" aria-controls="featured-products" aria-selected="true">Football Collection</a>
 						</li>
 					</ul>
 					<div class="tab-content">
@@ -172,7 +172,7 @@ $watchProducts = $eloquent->selectData($columnName, $tableName, @$whereValue, @$
 				<div class="home-product-tabs">
 					<ul class="nav nav-tabs" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link active" id="featured-products-tab" data-toggle="tab" href="#featured-products" role="tab" aria-controls="featured-products" aria-selected="true">Watch</a>
+							<a class="nav-link active" id="featured-products-tab" data-toggle="tab" href="#featured-products" role="tab" aria-controls="featured-products" aria-selected="true">Softball COLLECTION</a>
 						</li>
 					</ul>
 					<div class="tab-content">
