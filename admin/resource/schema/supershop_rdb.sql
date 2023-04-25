@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2023 at 07:43 AM
+-- Generation Time: Apr 25, 2023 at 08:10 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -153,13 +153,6 @@ CREATE TABLE `invoices` (
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Dumping data for table `invoices`
---
-
-INSERT INTO `invoices` (`id`, `invoice_id`, `customer_id`, `shipping_id`, `order_id`, `transaction_amount`, `created_at`, `updated_at`) VALUES
-(1, 'COD#30734', 1, 1, 1, 264, '2023-04-25 11:40:56', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -196,13 +189,6 @@ CREATE TABLE `orders` (
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`id`, `customer_id`, `order_date`, `sub_total`, `tax`, `delivery_charge`, `discount_amount`, `grand_total`, `payment_method`, `transaction_id`, `transaction_status`, `order_item_status`, `created_at`, `updated_at`) VALUES
-(1, 1, '2023-04-25 11:40:30', 199, 14.925, 50, 0, 264, 'Cash On Delivery', 'COD#1', 'Unpaid', 'Pending', '2023-04-25 11:40:30', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -219,13 +205,6 @@ CREATE TABLE `order_items` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `order_items`
---
-
-INSERT INTO `order_items` (`id`, `customer_id`, `order_id`, `product_id`, `product_price`, `prod_quantity`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 1, 199, 1, '2023-04-25 11:40:30', NULL);
 
 -- --------------------------------------------------------
 
@@ -273,7 +252,10 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `product_name`, `product_summary`, `product_details`, `product_master_image`, `product_quantity`, `product_price`, `product_discount_price`, `discount_start`, `discount_ends`, `product_status`, `product_featured`, `product_tags`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 'Money Ball 23 East', '									Lorem Ipsum								', '									Lorem Ipsum								', 'PRODUCT_20230425113927_BBP1.jpg', 100, 199, 15, '2023-04-25 07:35:42', '2023-04-25 07:35:42', 'In Stock', 'NO', '', NULL, NULL);
+(1, 1, 1, 'Pacers 17', '									Lorem Ipsum								', 'XL', 'PRODUCT_20230425120936_932f5899e91d3a0aa1dd7a6a8493cc76.png', 100, 199, 0, '2023-04-25 07:34:20', '2023-04-25 07:34:20', 'In Stock', 'YES', 'basketball', NULL, NULL),
+(2, 1, 1, 'Team 25', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,								', '									XL								', 'PRODUCT_20230425115837_PRODUCT_20230425092324_basketball-jersey-icon-on-transp.png', 100, 199, 15, '2023-04-25 07:55:21', '2023-04-25 07:55:21', 'In Stock', 'YES', '', NULL, NULL),
+(3, 1, 1, 'Young Ma 3', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,								', '									XL								', 'PRODUCT_20230425120044_BBP2.jpg', 100, 299, 20, '2023-04-25 07:59:29', '2023-04-25 07:59:29', 'In Stock', 'NO', '', NULL, NULL),
+(4, 1, 1, 'Atlanta 17', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									M								', 'PRODUCT_20230425120858_atlanta.png', 100, 299, 10, '2023-04-25 08:04:10', '2023-04-25 08:04:10', 'In Stock', 'YES', '', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -295,13 +277,6 @@ CREATE TABLE `shippings` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `shippings`
---
-
-INSERT INTO `shippings` (`id`, `customer_id`, `order_id`, `shipcstmr_name`, `shipcstmr_mobile`, `shipcstmr_profession`, `shipcstmr_streetadd`, `shipcstmr_city`, `shipcstmr_zip`, `shipcstmr_country`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 'Francis Lopez', '09568134274', '', 'Santol Street', 'Iriga City', '4431', 'Philippines', '2023-04-25 11:40:35', NULL);
 
 -- --------------------------------------------------------
 
@@ -333,6 +308,16 @@ CREATE TABLE `slides` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `slides`
+--
+
+INSERT INTO `slides` (`id`, `slider_title`, `slider_file`, `slider_status`, `slider_sequence`, `created_at`, `updated_at`) VALUES
+(1, 'ㅤ', 'SLIDER_20230425114750_1..png', 'Active', 1, NULL, NULL),
+(2, 'ㅤ', 'SLIDER_20230425114758_new.png', 'Active', 1, NULL, NULL),
+(3, 'ㅤ', 'SLIDER_20230425114805_5.png', 'Active', 1, NULL, NULL),
+(4, 'ㅤ', 'SLIDER_20230425115157_5.png', 'Active', 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -504,7 +489,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `deliveries`
 --
 ALTER TABLE `deliveries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'DELIVERIES ID', AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'DELIVERIES ID', AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `discounts`
@@ -516,7 +501,7 @@ ALTER TABLE `discounts`
 -- AUTO_INCREMENT for table `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'INVOICE ID', AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'INVOICE ID', AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `newsletters`
@@ -528,13 +513,13 @@ ALTER TABLE `newsletters`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDERS ID', AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDERS ID', AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDER ITEMS ID', AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDER ITEMS ID', AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -546,25 +531,25 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'PRODUCTS ID', AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'PRODUCTS ID', AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `shippings`
 --
 ALTER TABLE `shippings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SHIPPING ID', AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SHIPPING ID', AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `shopcarts`
 --
 ALTER TABLE `shopcarts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SHOPCARTS ID', AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SHOPCARTS ID', AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `slides`
 --
 ALTER TABLE `slides`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SLIDER ID';
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SLIDER ID', AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `subcategories`
