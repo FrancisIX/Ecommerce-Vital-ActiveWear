@@ -346,7 +346,7 @@ $deliveryCharge = $eloquent->selectData($columnName, $tableName, @$whereValue);
 							<select class="form-control" name="shipping_method">
 								<option> select shipping method </option>
 								<option value="50"> Cash of Delivery </option>
-								<option value="120"> Paymaya</option>
+								<option value="120"> MasterCard</option>
 							</select>
 							<div class="input-group-append">
 								<button name="fob" class="btn btn-sm btn-info" type="submit">Confirm Shipping</button>

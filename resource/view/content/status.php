@@ -182,7 +182,7 @@ $invoiceDetails = $eloquent->selectData($columnName, $tableName, $whereValue);
 							<div class="col-md-3 col-xs-2">
 								<div class="invoice-title">
 									<h1>invoice</h1>
-									<img class="logo-print" src="public/assets/images/favicon/logoFrontEnd.png" alt="" style="width: 220px; height: 60px;">
+									<img class="logo-print" src="public/assets/images/favicon/logoFrontEnd.png" alt="" style="width: 200px; height: 60px;">
 								</div>
 							</div>
 							<div class="invoice-info  col-md-9 col-xs-10">
@@ -279,11 +279,11 @@ $invoiceDetails = $eloquent->selectData($columnName, $tableName, $whereValue);
 						<div class="col-md-8 col-xs-7 payment-method">
 							<h4>Payment Method</h4>
 							<p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							<p>2. Pellentesque tincidunt pulvinar magna quis rhoncus.</p>
-							<p>3. Cras rhoncus risus vitae congue commodo.</p>
+							<p>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<p>3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 							<p style="font-style: normal; font-size: 17px;" class="inv-label mt-1 mb-2"> 
 								<span style="color: orange; font-weight: bold;">IN AMOUNT: </span>
-								<?php echo $getAmount->inAwords($getdetailsResult[0]['grand_total']) . ' TAKA ONLY'; ?>
+								<?php echo $getAmount->inAwords($getdetailsResult[0]['grand_total']) . ' PESO ONLY'; ?>
 							</p>
 							<h3 class="inv-label itatic">Thank you for your business</h3>
 						</div>

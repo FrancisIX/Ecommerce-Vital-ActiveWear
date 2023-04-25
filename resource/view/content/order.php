@@ -316,7 +316,7 @@ if(isset($_POST['customerRegistration']))
 									</div>
 									<div class="form-group">
 										<label>Country</label>
-										<input type="text" name="shipadd_cntry" class="form-control" value="Bangladesh">
+										<input type="text" name="shipadd_cntry" class="form-control" value="Philippines">
 									</div>
 									<div class="form-group required-field">
 										<label>Phone Number </label>
