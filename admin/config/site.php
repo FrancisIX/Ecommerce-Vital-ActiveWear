@@ -1,6 +1,6 @@
 <?php
 ### Website Configuration
-// $GLOBALS['CURRENCY'] = "&#8369;" ;
+$GLOBALS['CURRENCY'] = "&#8369;" ;
 
 ### ADMINS IMAGE DIRECTORY
 $GLOBALS['ADMINS_DIRECTORY'] = "../public/uploads/admins/";
