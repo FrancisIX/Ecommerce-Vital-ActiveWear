@@ -454,7 +454,7 @@ $invoiceDetails = $eloquent->selectData($columnName, $tableName, $whereValue);
 								<p>3. Cras rhoncus risus vitae congue commodo.</p>
 								<p style="font-style: normal; font-size: 17px;" class="inv-label mt-1 mb-2"> 
 									<span style="color: orange; font-weight: bold;">IN AMOUNT: </span>
-									<?php echo $getAmount->inAwords($getdetailsResult[0]['grand_total']) . ' TAKA ONLY'; ?>
+									<?php echo $getAmount->inAwords($getdetailsResult[0]['grand_total']) . ' PHP ONLY'; ?>
 								</p>
 								<h3 class="inv-label itatic">Thank you for your business</h3>
 							</div>

@@ -1,6 +1,6 @@
 <?php
 ### SET TIME ZONE
-date_default_timezone_set("Asia/Dhaka");
+date_default_timezone_set("Asia/Manila");
 
 ### SET SMTP CONFIGURATION
 $GLOBALS['SMTPHOST'] = "mail.servername.com";
