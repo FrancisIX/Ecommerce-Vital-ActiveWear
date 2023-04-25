@@ -241,16 +241,16 @@ $totalCustomer = count($customerResult);
 					<div class="panel">
 						<div class="panel-body">
 							<div style="margin-bottom: 10px;">
-								<a class="btn p-follow-btn" href="mailto:md.aamroni@hotmail.com"> 
-									<i class="fa fa-envelope"></i> &nbsp; md.aamroni@hotmail.com 
+								<a class="btn p-follow-btn" href="fslntsho@gmail.com"> 
+									<i class="fa fa-envelope"></i> &nbsp; fslntsho@gmail.com 
 								</a>
 							</div>
 							<div style="margin-bottom: 10px;">
 								<a class="btn p-follow-btn" href="callto:8801316440504" style="margin-right: 8px;"> 
-									<i class="fa fa-phone"></i> &nbsp; +880 1316 440504
+									<i class="fa fa-phone"></i> &nbsp; +63 9568134274
 								</a>
-								<a class="btn p-follow-btn" href="skype:live:.cid.5ed7daebee5e7820"> 
-									<i class="fa fa-skype"></i> &nbsp; md.aamroni
+								<a class="btn p-follow-btn" href=""> 
+									<i class="fa fa-skype"></i> &nbsp; @francis
 								</a>
 							</div>
 						</div>
@@ -272,28 +272,28 @@ $totalCustomer = count($customerResult);
 							</ol>
 							<div class="carousel-inner">
 								<div class="item text-center active">
-									<h3> SUPERSHOP | ONLINE SHOPPING STORE </h3>
-									<p> frontEnd Development </p>
+									<h3> VITAL|ACTIVEWEAR</h3>
+									
 									<p class="text-muted">
-										supershop.com is a eCommerce application where all of the data is totally dynamic content
+										VITAL|ACTIVEWEAR.com is a eCommerce application where all of the data is totally dynamic content
 									</p>
 								</div>
 								<div class="item text-center">
-									<h3> SUPERSHOP | ONLINE SHOPPING STORE </h3>
+									<h3>VITAL|ACTIVEWEAR | ONLINE SHOPPING STORE </h3>
 									<p> frontEnd Development </p>
 									<p class="text-muted">
 										and also lightweight as well, so that it will be load fast as user expectation and friendly
 									</p>
 								</div>
 								<div class="item text-center">
-									<h3> SUPERSHOP | ONLINE SHOPPING STORE </h3>
+									<h3> VITAL|ACTIVEWEAR | ONLINE SHOPPING STORE </h3>
 									<p> backEnd Development </p>
 									<p class="text-muted">
 										in this application, designed with MVC pattern and also clean coding standard
 									</p>
 								</div>								
 								<div class="item text-center">
-									<h3> SUPERSHOP | ONLINE SHOPPING STORE </h3>
+									<h3> VITAL|ACTIVEWEAR | ONLINE SHOPPING STORE </h3>
 									<p> backEnd Development </p>
 									<p class="text-muted">
 										without any framework, in raw PHP this application is totally dynamic for crud operation

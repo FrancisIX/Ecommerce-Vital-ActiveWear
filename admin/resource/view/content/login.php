@@ -71,16 +71,16 @@ if(isset($_POST['try_login']))
 		<div class="container">
 			<form class="form-signin" method="post" action="">
 				<div class="form-signin-heading text-center">
-					<h1 class="sign-title"> Sign In </h1>
+					<h1 class="sign-title">ADMIN PANEL </h1>
 					<img class="disable" src="../public/assets/images/favicon/loginBackEnd.png" alt="" style="height: 126px;"/>
 				</div>
 				<div class="login-wrap">
-					<input name="username" type="email" class="form-control" placeholder="Email ID" >
+					<input name="username" type="email" class="form-control" placeholder="Email Address" >
 					<input name="password" type="password" class="form-control" placeholder="Password" >
 					<button name="try_login" class="btn btn-lg btn-login btn-block" type="submit">
 						<i class="fa fa-check"></i>
 					</button>
-					<div class="registration"> Not a member yet? <a href="registration.php"> Signup </a></div>
+					<!-- <div class="registration"> Not a member yet? <a href="registration.php"> Signup </a></div> -->
 				</div>
 			</form>
 		</div>	
