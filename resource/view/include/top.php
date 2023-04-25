@@ -210,7 +210,7 @@
 						<div class="header-center" style="padding-left: -20px;">
 							<form action="search.php" method="post" style="margin-bottom: -8px;">
 								<div class="input-group" style="width: 100%; margin: 0px 60px;">
-									<input type="search" class="form-control" name="keywords" id="search" placeholder="Type your Search Keyword" required>
+									<input type="search" class="form-control" name="keywords" id="search" placeholder="Search product here" required>
 									<div class="input-group-append">
 										<button class="btn btn-sm btn-primary" type="submit"><i class="icon-magnifier"></i> SEARCH </button>
 									</div>
@@ -224,6 +224,9 @@
 						
 						<div class="header-right">
 							<button class="mobile-menu-toggler" type="button"><i class="icon-menu"></i></button>
+							<div class="header-contact">
+							<span>We are Group 10</span>
+							</div>
 							<div class="header-contact"><span>Call us now</span>
 								<a href="tel:#"><strong>+63 9568134274</strong></a>
 							</div>
