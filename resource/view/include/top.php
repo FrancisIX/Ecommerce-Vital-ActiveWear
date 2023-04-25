@@ -142,22 +142,22 @@
 					<div class="container">
 						<div class="header-left header-dropdowns">
 							<div class="header-dropdown">
-								<a href="#">BDT</a>
+								<a href="#">PESO</a>
 								<div class="header-menu">
-									<ul>
+									<!-- <ul>
 										<li><a href="#">EUR</a></li>
 										<li><a href="#">USD</a></li>
-									</ul>
+									</ul> -->
 								</div>
 							</div>
 							<div class="header-dropdown">
-								<a href="#"><img src="public/assets/images/favicon/bd.png" alt="Bangladesh flag">BANGLADESH</a>
-								<div class="header-menu">
+								<a href="#"><img src="public/assets/images/favicon/ph.png" alt="Philippinesflag">PHILIPPINES</a>
+								<!-- <div class="header-menu">
 									<ul>
 										<li><a href="#"><img src="public/assets/images/favicon/en.png" alt="England flag">ENGLISH</a></li>
 										<li><a href="#"><img src="public/assets/images/favicon/fr.png" alt="France flag">FRENCH</a></li>
 									</ul>
-								</div>
+								</div> -->
 							</div>
 						</div>
 						<div class="header-right">
@@ -225,7 +225,7 @@
 						<div class="header-right">
 							<button class="mobile-menu-toggler" type="button"><i class="icon-menu"></i></button>
 							<div class="header-contact"><span>Call us now</span>
-								<a href="tel:#"><strong>+880 1316 440504</strong></a>
+								<a href="tel:#"><strong>+63 9568134274</strong></a>
 							</div>
 							<div class="dropdown cart-dropdown">
 								<a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">

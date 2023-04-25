@@ -55,9 +55,9 @@
 							<div class="col-lg-4 col-md-6">
 								<div class="widget">
 									<ul class="contact-info">
-										<li><span class="contact-info-label">Address:</span>Panthapath, Dhaka-1206, Bangladesh</li>
-										<li><span class="contact-info-label">Phone:</span>Toll Free <a href="tel:">(+880) 1316-440504</a></li>
-										<li><span class="contact-info-label">Email:</span> <a href="mailto:mail@example.com">md.aamroni@gmail.com</a></li>
+										<li><span class="contact-info-label">Address:</span>Bicol, Camarines Sur, Philippines</li>
+										<li><span class="contact-info-label">Phone:</span>Toll Free <a href="tel:">(+63) 9568134274</a></li>
+										<li><span class="contact-info-label">Email:</span> <a href="mailto:mail@example.com">fslntsho@gmail.com</a></li>
 										<li><span class="contact-info-label">Working Days/Hours:</span>Mon - Sun / 9:00AM - 8:00PM</li>
 									</ul>
 								</div>
