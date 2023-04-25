@@ -23,7 +23,7 @@
 		<meta name="keywords" content="eCommerce Project" />
 		<meta name="description" content="Full Stack Web Developer">
 		<meta name="author" content="Md. Abdullah Al Mamun Roni">
-		<title> SuperShop | <?php echo $pageTitle ?> </title>
+		<title> Vital|ActiveWear | <?php echo $pageTitle ?> </title>
 		
 		<link rel="icon" type="image/icon" href="public/assets/images/favicon/faviconFrontEnd.png">
 		
