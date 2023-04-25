@@ -182,7 +182,7 @@ $deliveryCharge = $eloquent->selectData($columnName, $tableName, @$whereValue);
 								<th class="product-col">Product</th>
 								<th class="price-col">Price</th>
 								<th class="qty-col">Qty</th>
-								<th class="price-col">Subttl</th>
+								<th class="price-col">Subtotal</th>
 								<th >Action</th>
 							</tr>
 						</thead>
@@ -345,8 +345,8 @@ $deliveryCharge = $eloquent->selectData($columnName, $tableName, @$whereValue);
 						<div class="input-group">
 							<select class="form-control" name="shipping_method">
 								<option> select shipping method </option>
-								<option value="50"> BDT 50 Tk Inside of Dhaka </option>
-								<option value="120"> BDT 120 Tk Outside of Dhaka</option>
+								<option value="50"> Cash of Delivery </option>
+								<option value="120"> Paymaya</option>
 							</select>
 							<div class="input-group-append">
 								<button name="fob" class="btn btn-sm btn-info" type="submit">Confirm Shipping</button>
