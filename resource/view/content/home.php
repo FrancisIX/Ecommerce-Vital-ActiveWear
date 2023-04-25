@@ -167,29 +167,7 @@ $watchProducts = $eloquent->selectData($columnName, $tableName, @$whereValue, @$
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="home-product-tabs">
-					<ul class="nav nav-tabs" role="tablist">
-						<li class="nav-item">
-							<a class="nav-link active" id="featured-products-tab" data-toggle="tab" href="#featured-products" role="tab" aria-controls="featured-products" aria-selected="true">Softball COLLECTION</a>
-						</li>
-					</ul>
-					<div class="tab-content">
-						<div class="tab-pane fade show active" id="featured-products" role="tabpanel" aria-labelledby="featured-products-tab">
-							<div class="row row-sm">
-								
-							<?php
-								#== WATCH'S PRODUCT BASE ON LAST ADDED AND IN STOCK
-								$homeCtrl->productLister($watchProducts);
-							?>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 	</div>
 	<div class="partners-container">
 		<div class="container">

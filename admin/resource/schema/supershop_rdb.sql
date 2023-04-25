@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2023 at 09:16 AM
+-- Generation Time: Apr 25, 2023 at 09:48 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -66,7 +66,8 @@ CREATE TABLE `categories` (
 
 INSERT INTO `categories` (`id`, `category_name`, `category_status`, `created_at`, `updated_at`) VALUES
 (1, 'Basketball', 'Active', NULL, NULL),
-(2, 'Football', 'Active', NULL, NULL);
+(2, 'Football', 'Active', NULL, NULL),
+(3, 'Volleyball', 'Active', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -268,7 +269,11 @@ INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `product_name`, `
 (13, 2, 4, 'Nike Dri-FIT Academy', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									Men\'s Short-Sleeve Graphic Football Top								', 'PRODUCT_20230425130636_dri-fit-academy-short-sleeve-gra.png', 100, 999, 1, '2023-04-25 09:05:27', '2023-04-25 09:05:27', 'In Stock', 'NO', '', NULL, NULL),
 (14, 2, 4, 'Paris Saint-Germain 2022/23 Match Fourth', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									Men\'s Jordan Dri-FIT ADV Football Shirt								', 'PRODUCT_20230425131016_qotarm airways.png', 100, 599, 5, '2023-04-25 09:08:54', '2023-04-25 09:08:54', 'In Stock', 'YES', '', NULL, NULL),
 (15, 2, 4, 'Nike Dri-FIT Academy', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									Men\'s Short-Sleeve Football Top								', 'PRODUCT_20230425131231_dri-fit-academy-short-sleeve-foo.png', 99, 299, 1, '2023-04-25 09:11:44', '2023-04-25 09:11:44', 'In Stock', 'YES', '', NULL, NULL),
-(16, 2, 4, 'F.C. Barcelona 2022/23 Stadium Third', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									Men\'s Nike Dri-FIT Football Shirt								', 'PRODUCT_20230425131517_fc-barcelona-2022-23-stadium-thi.png', 100, 599, 1, '2023-04-25 09:14:23', '2023-04-25 09:14:23', 'In Stock', 'YES', '', NULL, NULL);
+(16, 2, 4, 'F.C. Barcelona 2022/23 Stadium Third', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									Men\'s Nike Dri-FIT Football Shirt								', 'PRODUCT_20230425131517_fc-barcelona-2022-23-stadium-thi.png', 100, 599, 1, '2023-04-25 09:14:23', '2023-04-25 09:14:23', 'In Stock', 'YES', '', NULL, NULL),
+(17, 3, 5, 'Fuze Women\'s Sublimated Pursuit Long Sleeve Jersey - Speed', '																		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s																', '																		Long Sleeve Jersey - Speed																', 'PRODUCT_20230425134120_01_speed_red-card-mainfront_01 (1).png', 100, 599, 15, '2023-04-25 09:38:57', '2023-04-25 09:38:57', 'In Stock', 'YES', '', NULL, NULL),
+(18, 3, 5, 'Pursuit Long Sleeve Jersey - Patriot', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									CustomFuze Women\'s Sublimated Pursuit								', 'PRODUCT_20230425134440_06_red_patriot_02.png', 100, 299, 10, '2023-04-25 09:43:37', '2023-04-25 09:43:37', 'In Stock', 'YES', '', NULL, NULL),
+(19, 3, 5, 'Long Sleeve Jersey - Rise', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									CustomFuze Women\'s Sublimated Pursuit								', 'PRODUCT_20230425134559_03_rise_ls_orange_01.png', 99, 199, 15, '2023-04-25 09:45:11', '2023-04-25 09:45:11', 'In Stock', 'YES', '', NULL, NULL),
+(20, 3, 5, 'Long Sleeve Jersey - Varsity', '									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s								', '									CustomFuze Women\'s Sublimated Pursuit 								', 'PRODUCT_20230425134709_09_varsity_navy_01.png', 100, 299, 20, '2023-04-25 09:46:15', '2023-04-25 09:46:15', 'In Stock', 'YES', '', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -356,7 +361,8 @@ INSERT INTO `subcategories` (`id`, `category_id`, `subcategory_name`, `subcatego
 (1, 1, 'Jersey', 'Active', 'SUBCATBANNER_20230425112957_jersey banner.png', '2023-04-25 11:29:57', NULL),
 (2, 1, 'Shorts', 'Active', 'SUBCATBANNER_20230425121315_shorts.png', '2023-04-25 12:13:15', NULL),
 (3, 2, 'Shoes', 'Active', 'SUBCATBANNER_20230425125238_shoes.png', '2023-04-25 12:52:38', NULL),
-(4, 2, 'FootBall Shirts', 'Active', 'SUBCATBANNER_20230425130518_football shirts.png', '2023-04-25 13:05:18', NULL);
+(4, 2, 'FootBall Shirts', 'Active', 'SUBCATBANNER_20230425130518_football shirts.png', '2023-04-25 13:05:18', NULL),
+(5, 3, 'Sleeve Jersey', 'Active', 'SUBCATBANNER__20230425133738_sleeve jersey.png', '2023-04-25 13:35:58', NULL);
 
 --
 -- Indexes for dumped tables
@@ -487,7 +493,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'CATEGORIES ID', AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'CATEGORIES ID', AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `contacts`
@@ -547,7 +553,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'PRODUCTS ID', AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'PRODUCTS ID', AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `shippings`
@@ -571,7 +577,7 @@ ALTER TABLE `slides`
 -- AUTO_INCREMENT for table `subcategories`
 --
 ALTER TABLE `subcategories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SUBCATEGORIES ID', AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SUBCATEGORIES ID', AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
