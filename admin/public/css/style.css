@@ -2828,7 +2828,7 @@ LOCK SCREEN STYLE
 --------------------------*/
 
 .lock-screen {
-background: #6fc4a5 url("./../../../public/assets/images/favicon/lockscreenBackEnd.jpg") no-repeat fixed;
+background: #274485;
 background-size: cover;
 width: 100%;
 height: 100%;
@@ -2856,9 +2856,10 @@ border: 6px solid #fff;
 }
 
 .lock-wrapper h1 {
+font-family:Verdana, Geneva, Tahoma, sans-serif;
 text-align: center;
-color: #6bc5a4;
-font-size: 18px;
+color: #274485;
+font-size: 35px;
 text-transform: uppercase;
 padding: 10px 0 10px;
 }
@@ -2873,7 +2874,7 @@ border-radius: 50%;
 display: inline-block;
 color: #fff;
 text-align: center;
-background: #6bc5a4;
+background: #274485;
 top: -25px;
 right: 125px;
 border: 4px solid #fff;
@@ -2889,7 +2890,7 @@ float: left;
 }
 
 .btn-lock {
-background: #6bc5a4;
+background: #274485;
 color: #fff;
 height: 40px;
 -webkit-transition: all 0.3s;

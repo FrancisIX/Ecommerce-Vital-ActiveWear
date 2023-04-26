@@ -33,7 +33,7 @@ if(isset($_POST['unlock']))
 		<meta name="description" content="Back End Development">
 		<meta name="author" content="Md. Abdullah Al Mamun Roni">
 		
-		<title>Admin Login | SuperShop</title>
+		<title>VITAL |ActiveWear</title>
 		
 		<!--=*= CSS FILES SOURCE START =*=-->
 		<link rel="shortcut icon" href="../public/assets/images/favicon/faviconBackEnd.png" type="image/png">
