@@ -202,7 +202,7 @@ $totalCustomer = count($customerResult);
 							</div>
 							<div class="text-center" style="padding-bottom: 10px;">
 								<h3> <?php echo $_SESSION['SMC_login_admin_name']; ?> </h3>
-								<h5 class="designation"> FULL STACK WEB DEVELOPER </h5>
+								<h5 class="designation"> Full Stack Web Developer</h5>
 							</div>
 							<a class="btn p-follow-btn pull-left" href="#"> <i class="fa fa-check"></i> Following</a>
 							<ul class="p-social-link pull-right">

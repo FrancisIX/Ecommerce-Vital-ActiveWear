@@ -23,7 +23,7 @@
 		<meta name="author" content="Md. Abdullah Al Mamun Roni">
 		<link rel="shortcut icon" href="../public/assets/images/favicon/faviconBackEnd.png" type="image/png">
 		
-		<title>SuperShop | <?php echo $pageTitle ?> </title>
+		<title>Vital|ActiveWear <?php echo $pageTitle ?> </title>
 		
 		<!--=*= CSS FILES SOURCE START =*=-->
 		<link href="public/summernote/summernote-lite.min.css" rel="stylesheet">
@@ -66,7 +66,7 @@
 							<img alt="" src="<?php echo $GLOBALS['ADMINS_DIRECTORY'] . $_SESSION['SMC_login_admin_image']; ?>" class="media-object">
 							<div class="media-body">
 								<h4> <a href="#"> <?php echo $_SESSION['SMC_login_admin_name']; ?> </a> </h4>
-								<span> FULL STACK WEB DEVELOPER </span>
+								<span> Full Stack Web Developer </span>
 							</div>
 						</div>
 						<h5 class="left-nav-title"> Account Information </h5>

@@ -44,10 +44,10 @@ if(isset($_POST['try_login']))
 		<meta name="description" content="Back End Development">
 		<meta name="author" content="Md. Abdullah Al Mamun Roni">
 		
-		<title>Admin Login | SuperShop</title>
+		<title>Vital |ActiveWear</title>
 		
 		<!--=*= CSS FILES SOURCE START =*=-->
-		<link rel="shortcut icon" href="../public/assets/images/favicon/faviconBackEnd.png" type="image/png">
+		<link rel="shortcut icon" href="../public/assets/images/favicon/activeww.png" type="image/png">
 		<link href="public/css/style.css" rel="stylesheet">
 		<link href="public/css/style-responsive.css" rel="stylesheet">
 		<!--=*= CSS FILES SOURCE END =*=-->
@@ -71,14 +71,16 @@ if(isset($_POST['try_login']))
 		<div class="container">
 			<form class="form-signin" method="post" action="">
 				<div class="form-signin-heading text-center">
-					<h1 class="sign-title">ADMIN PANEL </h1>
-					<img class="disable" src="../public/assets/images/favicon/loginBackEnd.png" alt="" style="height: 126px;"/>
+					<h1 class="sign-title">WELCOME TO</h1>
+					<h1 class="sign-sub">Administrator</h1>
+					<img class="disable" src="../public/assets/images/favicon/loginBackEnd.png" alt="Blue" style="height: 130px;"/>
 				</div>
+				
 				<div class="login-wrap">
 					<input name="username" type="email" class="form-control" placeholder="Email Address" >
 					<input name="password" type="password" class="form-control" placeholder="Password" >
 					<button name="try_login" class="btn btn-lg btn-login btn-block" type="submit">
-						<i class="fa fa-check"></i>
+						<i class="fa fa-">Login</i>
 					</button>
 					<!-- <div class="registration"> Not a member yet? <a href="registration.php"> Signup </a></div> -->
 				</div>
