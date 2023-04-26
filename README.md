@@ -1,31 +1,5 @@
-## SuperShop - Single Vendor Ecommerce Application
-
-
-### FrontEnd Application Folder Structure
-
-```
-├───app
-│   ├───Http
-│   │   └───Controllers
-│   └───Models
-├───config
-├───public
-│   ├───assets
-│   │   ├───css
-│   │   ├───fonts
-│   │   ├───images
-│   │   └───js
-│   └───uploads
-│       ├───admins
-│       ├───banners
-│       ├───products
-│       └───slides
-└───resource
-    ├───files
-    └───view
-        ├───content
-        └───include
-```
+## Vital|ActiveWear Ecommerce Final Project
+## Group 10
 
 
 ### Features:
