@@ -68,7 +68,7 @@
 				<div class="container">
 					<div class="footer-bottom">
 						<p class="footer-copyright mt-1">All Rights Reserved &copy; <?= date('Y') ?> | Developed By 
-							<a href="//aamroni.info" target="_blank"> Md. Abdullah Al Mamun Roni</a>
+							<a href="//aamroni.info" target="_blank"> Francis Lopez</a>
 						</p>
 						<div class="social-icons">
 							<a><img style="height: 33px; padding-left: 16px;" src="public/assets/images/icons/payment (6).png" alt=""></a>
