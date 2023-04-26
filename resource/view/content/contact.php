@@ -87,7 +87,7 @@ if(isset($_POST['user_contact']))
 					
 					// #== Let's also add a marker while we're at it
 					
-				var marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(23.617928, 90.4864331)});infowindow = new google.maps.InfoWindow({content:"<b>https://aamroni.net</b><br/>BSCIC-1420<br/> Narayanganj" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+				var marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(13.3961, 123.3374)});infowindow = new google.maps.InfoWindow({content:"<b>https://aamroni.net</b><br/>BSCIC-1420<br/> Narayanganj" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
 			</script> 
 			<!--=*= GOOGLE MAP CONTENT END =*=-->
 			
@@ -122,23 +122,23 @@ if(isset($_POST['user_contact']))
 				<div class="contact-info">
 					<div>
 						<i class="icon-phone"></i>
-						<p><a href="tel:">880 1316 440504</a></p>
-						<p>Cell Number</p>
+						<p><a href="tel:">+63 9568134274</a></p>
+						<p>Phone Number</p>
 					</div>
 					<div>
 						<i class="icon-mobile"></i>
-						<p><a href="tel:">880 1316 440497</a></p>
+						<p><a href="tel:">+63 9568134274</a></p>
 						<p>Home Number</p>
 					</div>
 					<div>
 						<i class="icon-mail-alt"></i>
-						<p><a href="mailto:#">md.aamroni@gmail.com</a></p>
-						<p><a href="mailto:#">md.aamroni@hotmail.com</a></p>
+						<p><a href="mailto:#">fslntsho@gmail.com</a></p>
+						<p><a href="mailto:#">fslntsho@gmail.com</a></p>
 					</div>
 					<div>
 						<i class="icon-skype"></i>
-						<p><a href="skype:live:.cid.5ed7daebee5e7820">md.aamroni</a></p>
-						<p>FULL STACK WEB DEVELOPER</p>
+						<p><a href="skype:live:.cid.5ed7daebee5e7820">FrancisXI</a></p>
+						<p>Front-End WEB DEVELOPER</p>
 					</div>
 				</div>
 			</div>
