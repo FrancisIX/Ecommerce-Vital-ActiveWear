@@ -73,7 +73,7 @@ if(isset($_POST['try_login']))
 				<div class="form-signin-heading text-center">
 					<h1 class="sign-title">WELCOME TO</h1>
 					<h1 class="sign-sub">Administrator</h1>
-					<img class="disable" src="../public/assets/images/favicon/loginBackEnd.png" alt="Blue" style="height: 130px;"/>
+					<!-- <img class="disable" src="../public/assets/images/favicon/loginBackEnd.png" alt="Blue" style="height: 130px;"/> -->
 				</div>
 				
 				<div class="login-wrap">

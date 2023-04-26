@@ -56,6 +56,7 @@ hr {
 -------------------------------*/
 
 .login-body {
+	padding-top: 100px;
 	background: #274485;
 	background-size: cover;
 	width: 100%;
@@ -63,12 +64,12 @@ hr {
 }
 
 .form-signin {
-	padding-top: 20rem;
+	padding-top: 15rem;
 	width: 55rem;
 	margin: 100px auto;
 	background: #fff;
 	border-radius: 5px;
-	-webkit-border-radius: 25px;
+	-webkit-border-radius: 40px;
 }
 
 .form-signin .form-signin-heading {
@@ -82,10 +83,10 @@ hr {
 .sign-title {
 	font-family: Arial;
 	font-weight: bold;
-	font-size: 60px;
+	font-size: 50px;
 	color: #274485;
 	position: absolute;
-	top: -110px;
+	top: -60px;
 	left: 0;
 	text-align: center;
 	width: 100%;
@@ -98,7 +99,7 @@ hr {
 	color: #274485;
 	position: absolute;
 	padding-top: 15px;
-	top: -60px;
+	top: -10px;
 	left: 0;
 	text-align: center;
 	width: 100%;
@@ -185,7 +186,7 @@ text-decoration: underline;
 }
 
 .login-wrap {
-padding: 30px;
+padding: 80px;
 position: relative;
 }
 
