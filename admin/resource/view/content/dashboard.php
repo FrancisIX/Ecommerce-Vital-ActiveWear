@@ -312,7 +312,7 @@ $totalCustomer = count($customerResult);
 				</div>
 				<div class="col-md-6">
 					<div class="panel">
-						<div class="panel-body p-states green-box">
+						<div class="panel-body p-states ">
 							<div class="summary pull-left">
 								<h4>Front End <span>Skiils</span></h4>
 								<span>Designing Languages &amp; Libraries</span>
@@ -324,7 +324,7 @@ $totalCustomer = count($customerResult);
 				</div>
 				<div class="col-md-6">
 					<div class="panel">
-						<div class="panel-body p-states green-box">
+						<div class="panel-body p-states ">
 							<div class="summary pull-left">
 								<h4>Back End <span>Skiils</span></h4>
 								<span>Programming Languages, Framework &amp; Database</span>
@@ -336,7 +336,7 @@ $totalCustomer = count($customerResult);
 				</div>
 				<div class="col-md-6">
 					<div class="panel">
-						<div class="panel-body p-states green-box">
+						<div class="panel-body p-states ">
 							<div class="summary pull-left">
 								<h4>Adobe Professional <span>Skiils</span></h4>
 								<span>Softwares and Platforms</span>
@@ -348,7 +348,7 @@ $totalCustomer = count($customerResult);
 				</div>
 				<div class="col-md-6">
 					<div class="panel">
-						<div class="panel-body p-states green-box">
+						<div class="panel-body p-states ">
 							<div class="summary pull-left">
 								<h4>Others <span>Skiils</span></h4>
 								<span>Softwares and Platforms</span>
