@@ -142,12 +142,12 @@ $breadcrumbName = $eloquent->selectJoinData($columnName, $tableName, $joinType, 
 									?>
 									
 								</h1>
-								<div class="ratings-container">
+								<!-- <div class="ratings-container">
 									<div class="product-ratings">
 										<span class="ratings" style="width:60%"></span>
 									</div>
 									<a href="#" class="rating-link">( 6 Reviews )</a>
-								</div>
+								</div> -->
 								<div class="price-box">
 									<span class="product-price">
 										
@@ -166,7 +166,7 @@ $breadcrumbName = $eloquent->selectJoinData($columnName, $tableName, $joinType, 
 									?>
 									
 								</div>
-								<div class="product-filters-container">
+								<!-- <div class="product-filters-container">
 									<div class="product-single-filter">
 										<label>Colors:</label>
 										<ul class="config-swatch-list">
@@ -176,7 +176,7 @@ $breadcrumbName = $eloquent->selectJoinData($columnName, $tableName, $joinType, 
 											<li> <a href="#" style="background-color: #11426b;"></a> </li>
 										</ul>
 									</div>
-								</div>
+								</div> -->
 								<div class="product-action product-all-icons">
 									<div class="d-flex d-block d-inline">
 										<div class="product-single-qty">
@@ -188,12 +188,12 @@ $breadcrumbName = $eloquent->selectJoinData($columnName, $tableName, $joinType, 
 											<button type="submit" name="add_to_cart" class="paction add-cart" title="Add to Cart" style="margin-left: 7px; padding-top: 6px;">
 												<span>Add to Cart</span>
 											</button>
-											<button href="#" class="paction add-wishlist" title="Add to Wishlist">
+											<!-- <button href="#" class="paction add-wishlist" title="Add to Wishlist">
 												<span>Add to Wishlist</span>
 											</button>
 											<button href="#" class="paction add-compare" title="Add to Compare">
 												<span>Add to Compare</span>
-											</button>
+											</button> -->
 										</form>
 									</div>
 								</div>								
