@@ -80,7 +80,7 @@
 						</div>
 						<div class="social-icons">
 							<a href="https://aamroni.info" target="_blank" style="margin: 0px 10px;">
-								<img src="public/assets/images/icons/aamroni.png" class="rounded-circle" style="width:32px; height:32px;">
+								<img src="public/assets/images/icons/me.png" class="rounded-circle" style="width:32px; height:32px;">
 							</a>				
 							<a href="https://www.facebook.com/abdullahalmamun.roni.3/" class="social-icon" target="_blank">
 								<i class="icon-facebook"></i>
