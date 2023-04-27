@@ -220,7 +220,7 @@
 						<div class="header-right">
 							<button class="mobile-menu-toggler" type="button"><i class="icon-menu"></i></button>
 							<div class="header-contact">
-							<span>We are Group 10</span>
+							<!-- <span>We are Group 10</span> -->
 							</div>
 							<div class="header-contact"><span>Call us now</span>
 								<a href="tel:#"><strong>+63 9568134274</strong></a>
