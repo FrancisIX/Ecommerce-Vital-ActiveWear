@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2023 at 03:38 PM
+-- Generation Time: Apr 28, 2023 at 01:50 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -173,6 +173,19 @@ CREATE TABLE `newsletters` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `newsletters`
+--
+
+INSERT INTO `newsletters` (`id`, `newsletter_email`, `created_at`, `updated_at`) VALUES
+(4, 'mariaginalopez1968@gmail.com', '2023-04-28 05:30:17', NULL),
+(5, 'mariaginalopez1968@gmail.com', '2023-04-28 05:33:25', NULL),
+(6, 'mariaginalopez1968@gmail.com', '2023-04-28 05:35:14', NULL),
+(7, 'mariaginalopez1968@gmail.com', '2023-04-28 05:35:30', NULL),
+(8, 'mariaginalopez1968@gmail.com', '2023-04-28 05:35:36', NULL),
+(9, 'mariaginalopez1968@gmail.com', '2023-04-28 05:35:43', NULL),
+(10, 'mariaginalopez1968@gmail.com', '2023-04-28 05:36:46', NULL);
 
 -- --------------------------------------------------------
 
@@ -553,7 +566,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `deliveries`
 --
 ALTER TABLE `deliveries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'DELIVERIES ID', AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'DELIVERIES ID', AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `discounts`
@@ -571,19 +584,19 @@ ALTER TABLE `invoices`
 -- AUTO_INCREMENT for table `newsletters`
 --
 ALTER TABLE `newsletters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'NEWSLETTER ID', AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'NEWSLETTER ID', AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDERS ID', AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDERS ID', AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDER ITEMS ID', AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDER ITEMS ID', AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -607,7 +620,7 @@ ALTER TABLE `shippings`
 -- AUTO_INCREMENT for table `shopcarts`
 --
 ALTER TABLE `shopcarts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SHOPCARTS ID', AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SHOPCARTS ID', AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `slides`
