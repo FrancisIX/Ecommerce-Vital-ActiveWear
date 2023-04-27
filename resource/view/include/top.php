@@ -143,12 +143,7 @@
 						<div class="header-left header-dropdowns">
 							<div class="header-dropdown">
 								<a href="#">PESO</a>
-								<div class="header-menu">
-									<!-- <ul>
-										<li><a href="#">EUR</a></li>
-										<li><a href="#">USD</a></li>
-									</ul> -->
-								</div>
+								
 							</div>
 							<div class="header-dropdown">
 								<a href="#"><img src="public/assets/images/favicon/ph.png" alt="Philippinesflag">PHILIPPINES</a>
