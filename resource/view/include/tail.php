@@ -33,7 +33,7 @@
 							<div class="col-lg-3 col-md-6">
 								<div class="widget">
 									<h4 class="widget-title">Main Features</h4>
-									<p>Supershop's infrastructure is manipulate with MVC Pattern and it's developed in a Raw PHP project. </p>
+									<p>Vital|ActiveWear infrastructure is manipulate with MVC Pattern and it's developed in a Raw PHP project. </p>
 									<p> 
 										<li> HTML5, CSS3 </li>
 										<li> Bootstrap 3.3.7, jQuery (Ajax) </li>
@@ -172,7 +172,7 @@
 						</div>
 						<div class="modal-body">
 							<h2>BE THE FIRST TO KNOW</h2>
-							<p>Subscribe to the <b> SuperShop Online Shopping</b>  newsletter <br/> to receive timely updates from your favorite products.</p>
+							<p>Subscribe to the <b> Vital|ActiveWear Online Shopping</b>  newsletter <br/> to receive timely updates from your favorite products.</p>
 							<form action="" method="post">
 								<div class="row">
 									<div class="col-sm-8 offest-sm-1">
