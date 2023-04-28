@@ -50,7 +50,7 @@ if(isset($_POST['userRegistration']))
 						if(@$registerUser > 0)
 						{
 							echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-										Thank you for registering with <b>SUPERSHOP.COM</b> Please  
+										Thank you for registering with <b>VITAL|ActiveWear</b> Please  
 											<a href="login.php"> <b>Login</b> </a> to to see your Dashboard
 										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 											<span aria-hidden="true">&times;</span>
