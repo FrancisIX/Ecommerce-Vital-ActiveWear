@@ -156,7 +156,7 @@
 							</div>
 						</div>
 						<div class="header-right">
-							<p class="welcome-msg">Have a good day ! 
+							<p class="welcome-msg">Enjoy your shopping !
 								
 								<?php 
 									#== GREETING MESSAGE | IF USER LOGGED IN OR NOT
