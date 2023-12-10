@@ -2,26 +2,26 @@
 ## ===*=== [C]ALLING CONTROLLER ===*=== ##
 include("app/Http/Controllers/Controller.php");
 
-
 ## ===*=== [O]BJECT DEFINED ===*=== ##
 $control = new Controller;
 $eloquent = new Eloquent;
 
-
-## ===*=== [G]ET PRODUCT ID ===*=== ##
-if(isset($_REQUEST['id']))
-{
-	$_SESSION['SSCF_product_product_id'] = $_REQUEST['id'];
+## ===*=== [V]ALIDATE AND SET PRODUCT ID ===*=== ##
+if (isset($_REQUEST['id']) && is_numeric($_REQUEST['id']) && $_REQUEST['id'] > 0) {
+    $_SESSION['SSCF_product_product_id'] = (int)$_REQUEST['id'];
+} else {
+    // Handle invalid input, perhaps redirect to an error page or show an error message
+    // For example:
+    header("Location: error_page.php");
+    exit();
 }
-## ===*=== [G]ET PRODUCT ID ===*=== ##
 
-
-## ===*=== [F]ETCH PRODUCT DATA BASED ON SESSION ID ===*=== ##
+## ===*=== [G]ET PRODUCT DATA BASED ON SESSION ID ===*=== ##
 $columnName = $tableName = $whereValue = null;
 $columnName = "*";
 $tableName = "products";
 $whereValue["id"] = $_SESSION['SSCF_product_product_id'];
-$productResult = $eloquent->selectData($columnName, $tableName, @$whereValue);
+$productResult = $eloquent->selectData($columnName, $tableName, @$whereValue);	
 ## ===*=== [F]ETCH PRODUCT DATA BASED ON SESSION ID ===*=== ##
 
 
@@ -141,7 +141,7 @@ $breadcrumbName = $eloquent->selectJoinData($columnName, $tableName, $joinType, 
 										echo $productResult[0]['product_name'];
 									?>
 									
-								</h1>
+								</h1>	
 								<!-- <div class="ratings-container">
 									<div class="product-ratings">
 										<span class="ratings" style="width:60%"></span>
