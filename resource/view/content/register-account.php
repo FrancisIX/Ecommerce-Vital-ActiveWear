@@ -60,7 +60,7 @@ if(isset($_POST['userRegistration']))
 					}
 				?>
 				
-				<form action="https://localhost/eco/register-account.php" method="post">
+				<form action="" method="post">
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="row">
